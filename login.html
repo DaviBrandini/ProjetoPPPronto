@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais e acentuação -->
+    <meta charset="UTF-8">
+    
+    <!-- Define a viewport para garantir que a página seja responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Inclui o Font Awesome para ícones -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <!-- Inclui o arquivo CSS específico para esta página de login -->
+    <link rel="stylesheet" href="login.css">
+    
+    <!-- Define o título da aba ou janela do navegador -->
+    <title>Entrar</title>
+</head>
+<body>
+    <!-- Contêiner principal que centraliza o conteúdo da página -->
+    <div class="container">
+        <!-- Cartão que contém o formulário de login -->
+        <div class="card">
+            <!-- Título principal da página de login -->
+            <h1>Entrar</h1>
+
+            <!-- Div para mensagens de erro, inicialmente oculta -->
+            <div id="msgError"></div>
+
+            <!-- Contêiner para o campo de entrada de email -->
+            <div class="label-float">
+                <!-- Campo de entrada para o email, com o atributo 'required' para obrigatoriedade -->
+                <input type="text" id="email" placeholder="" required />
+                <!-- Rótulo do campo de entrada de email, que flutua acima do campo quando ele está focado ou preenchido -->
+                <label id="userLabel" for="email">Email</label>
+            </div>
+
+            <!-- Contêiner para o campo de entrada de senha -->
+            <div class="label-float">
+                <!-- Campo de entrada para a senha, com o atributo 'required' para obrigatoriedade -->
+                <input type="password" id="senha" placeholder="" required />
+                <!-- Rótulo do campo de entrada de senha, que flutua acima do campo quando ele está focado ou preenchido -->
+                <label id="senhaLabel" for="senha">Senha</label>
+                <!-- Ícone para mostrar/ocultar a senha -->
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <!-- Contêiner para o botão de login, centralizado -->
+            <div class="justify-center">
+                <!-- Botão para enviar o formulário de login, chama a função 'entrar()' no clique -->
+                <button onclick="entrar()">Entrar</button>
+            </div>
+
+            <!-- Contêiner para a linha horizontal, centralizada -->
+            <div class="justify-center">
+                <!-- Linha horizontal para separar a seção de login da seção de cadastro -->
+                <hr />
+            </div>
+
+            <!-- Parágrafo com um link para a página de cadastro -->
+            <p>
+                Não tem uma conta?
+                <!-- Link para a página de cadastro -->
+                <a href="cadastro.html">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Inclui o arquivo JavaScript para adicionar funcionalidades ao formulário -->
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Importa a fonte Roboto do Google Fonts para uso no site */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Aplica estilo global a todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos nas dimensões do elemento */
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão como Roboto */
+}
+
+/* Estilo para o corpo da página */
+body {
+    background-color: #f5f0e6; /* Define o fundo como bege claro */
+    display: flex; /* Usa o Flexbox para posicionar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+}
+
+/* Estilo para o contêiner do cartão */
+.container {
+    display: flex; /* Usa o Flexbox para posicionar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 100%; /* Define a largura do contêiner como 100% */
+}
+
+/* Estilo para o cartão de cadastro */
+.card {
+    background-color: #ffffff; /* Define o fundo do cartão como branco */
+    padding: 40px; /* Adiciona preenchimento interno de 40px */
+    border-radius: 12px; /* Adiciona bordas arredondadas com raio de 12px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao cartão */
+    width: 400px; /* Define a largura do cartão como 400px */
+    max-width: 100%; /* Garante que o cartão não exceda a largura do contêiner */
+}
+
+/* Estilo para o título no cartão */
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    color: #2e7d32; /* Define a cor do texto como verde */
+    margin-bottom: 25px; /* Adiciona uma margem inferior de 25px */
+}
+
+/* Estilo para os campos de entrada dentro do contêiner label-float */
+.label-float input {
+    width: 100%; /* Define a largura dos campos de entrada como 100% */
+    padding: 10px 5px; /* Adiciona preenchimento interno de 10px em cima e embaixo, e 5px nas laterais */
+    border: none; /* Remove a borda padrão dos campos de entrada */
+    border-bottom: 2px solid #2e7d32; /* Adiciona uma linha verde na parte inferior dos campos */
+    background-color: transparent; /* Define o fundo dos campos como transparente */
+    outline: none; /* Remove o contorno padrão dos campos de entrada */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Estilo para o contêiner label-float */
+.label-float {
+    position: relative; /* Define a posição relativa para posicionar o label sobre o input */
+}
+
+/* Estilo para o campo de entrada quando está em foco */
+.label-float input:focus {
+    border-bottom: 2px solid #1b5e20; /* Muda a cor da linha inferior para um verde mais escuro quando o campo está em foco */
+}
+
+/* Estilo para o rótulo do campo de entrada */
+.label-float label {
+    position: absolute; /* Define a posição absoluta para o rótulo */
+    left: 0; /* Alinha o rótulo à esquerda do campo de entrada */
+    top: 50%; /* Posiciona o rótulo verticalmente no meio do campo de entrada */
+    transform: translateY(-50%); /* Ajusta a posição vertical do rótulo para centralizá-lo */
+    color: #2e7d32; /* Define a cor do rótulo como verde */
+    font-size: 16px; /* Define o tamanho da fonte do rótulo como 16px */
+    pointer-events: none; /* Desativa eventos de ponteiro no rótulo */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades durante 0.3 segundos */
+}
+
+/* Estilo para o rótulo do campo de entrada quando o campo está em foco ou não tem placeholder */
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+    top: 0; /* Move o rótulo para cima */
+    transform: translateY(-100%); /* Ajusta a posição vertical do rótulo para cima */
+    font-size: 12px; /* Reduz o tamanho da fonte do rótulo para 12px */
+    color: #1b5e20; /* Muda a cor do rótulo para um verde mais escuro */
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #2e7d32; /* Define a cor de fundo do botão como verde */
+    color: #fff; /* Define a cor do texto do botão como branco */
+    padding: 10px 15px; /* Adiciona preenchimento interno de 10px em cima e embaixo, e 15px nas laterais */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Adiciona bordas arredondadas com raio de 4px */
+    cursor: pointer; /* Define o cursor como pointer para indicar um botão clicável */
+    width: 100%; /* Define a largura do botão como 100% do contêiner pai */
+    font-size: 16px; /* Define o tamanho da fonte do botão como 16px */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo durante 0.3 segundos */
+}
+
+/* Estilo para o botão quando o cursor está sobre ele */
+button:hover {
+    background-color: #1b5e20; /* Muda a cor de fundo para um verde mais escuro quando o botão é passado com o cursor */
+}
+
+/* Estilo para mensagens de erro e sucesso */
+#msgError, #msgSuccess {
+    text-align: center; /* Centraliza o texto das mensagens */
+    padding: 10px; /* Adiciona preenchimento interno de 10px */
+    border-radius: 4px; /* Adiciona bordas arredondadas com raio de 4px */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+    display: none; /* Inicialmente oculta as mensagens */
+}
+
+/* Estilo para mensagens de erro */
+#msgError {
+    background-color: #ffebee; /* Define o fundo como vermelho claro */
+    color: #d32f2f; /* Define a cor do texto como vermelho escuro */
+}
+
+/* Estilo para mensagens de sucesso */
+#msgSuccess {
+    background-color: #e8f5e9; /* Define o fundo como verde claro */
+    color: #388e3c; /* Define a cor do texto como verde escuro */
+}
+
+/* Estilo para o ícone de mostrar/ocultar senha */
+.fa-eye {
+    position: absolute; /* Define a posição absoluta para posicionar o ícone dentro do campo de entrada */
+    top: 50%; /* Posiciona o ícone verticalmente no meio do campo de entrada */
+    right: 10px; /* Alinha o ícone à direita do campo de entrada com um espaço de 10px */
+    transform: translateY(-50%); /* Ajusta a posição vertical do ícone para centralizá-lo */
+    cursor: pointer; /* Define o cursor como pointer para indicar um ícone clicável */
+    color: #2e7d32; /* Define a cor do ícone como verde */
+}
+
+/* Estilo para responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Define a largura do cartão como 90% da largura do contêiner pai em telas menores */
+        padding: 20px; /* Reduz o preenchimento interno para 20px em telas menores */
+    }
+}

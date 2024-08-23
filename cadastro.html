@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres usada na página como UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Define o modo de compatibilidade para o Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Define a largura da viewport para a responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Inclui o arquivo de estilos Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Inclui o arquivo de estilos específico para a página de cadastro -->
+    <link rel="stylesheet" href="cadastro.css" />
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Cadastro</title>
+</head>
+<body>
+    <!-- Container principal para o formulário de cadastro -->
+    <div class="container">
+        <!-- Cartão que contém o formulário de cadastro -->
+        <div class="card">
+            <!-- Título principal da página -->
+            <h1>Cadastrar</h1>
+
+            <!-- Div para mensagens de erro, inicialmente vazia -->
+            <div id="msgError"></div>
+            <!-- Div para mensagens de sucesso, inicialmente vazia -->
+            <div id="msgSuccess"></div>
+
+            <!-- Seção para o campo de entrada do nome -->
+            <div class="label-float">
+                <input type="text" id="nome" placeholder=" " required />
+                <label id="labelNome" for="nome">Nome</label>
+            </div>
+
+            <!-- Seção para o campo de entrada do e-mail -->
+            <div class="label-float">
+                <input type="text" id="email" placeholder=" " required />
+                <label id="labelEmail" for="email">Email</label>
+            </div>
+
+            <!-- Seção para o campo de entrada da senha com um ícone para mostrar/esconder a senha -->
+            <div class="label-float">
+                <input type="password" id="senha" placeholder=" " required />
+                <label id="labelSenha" for="senha">Senha</label>
+                <!-- Ícone de olho para mostrar/esconder a senha -->
+                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <!-- Botão para submeter o formulário de cadastro -->
+            <div class="justify-center">
+                <button id="btnConfirm" onclick="cadastrar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclui o script JavaScript para a funcionalidade do cadastro -->
+    <script src="cadastro.js"></script>
+</body>
+</html>
