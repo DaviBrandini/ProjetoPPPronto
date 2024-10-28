@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8, que é uma codificação padrão para caracteres em muitas línguas -->
+    <meta charset="UTF-8">
+    
+    <!-- Configura a viewport para que a página seja exibida corretamente em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Landing Page Porto Alegre</title>
+
+    <!-- Vincula o arquivo CSS externo para estilizar a página -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Inclui a API do Google Maps com a chave de API. 
+         A função 'initMap' será chamada para inicializar o mapa quando a API estiver carregada -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVEkBoGUkJYwJMSH6dTIhwiny2ldgp7rw&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Sidebar de navegação lateral -->
+    <div class="sidebar" id="sidebar">
+        <!-- Links para diferentes páginas do site -->
+        <a href="inicio.html">Home</a>
+        <a href="paginas/pontosturisticos.html">Pontos Turísticos</a> 
+        <a href="paginas/sobrePOA.html">Sobre POA</a>
+        <button id="logout-button">Sair</button> <!-- Botão de logout -->      
+    </div>
+
+    <!-- Botão para abrir e fechar a sidebar -->
+    <button class="open-btn" id="openBtn" onclick="toggleSidebar()">☰ Menu</button>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Título principal da página -->
+        <h1>Bem-vindo a Porto Alegre</h1>
+    </header>
+
+    <!-- Seção do mapa do Google Maps -->
+    <section id="map">
+        <!-- O mapa será carregado aqui, dependendo da implementação da função 'initMap' no JavaScript -->
+    </section>
+
+    <!-- Formulário para envio de endereço -->
+    <form action="#">
+        <!-- Rótulo para o campo de entrada de texto -->
+        <label for="title">Endereço:</label><br>
+        <!-- Campo de entrada para o endereço -->
+        <input type="text" id="title" name="title" placeholder="Digite o endereço aqui..."><br>
+        
+        <!-- Botão para enviar o formulário -->
+        <button id="handleSubmit">Enviar</button>
+        
+        <!-- Div para exibir mensagens relacionadas ao formulário -->
+        <div id="messages">
+            <!-- Mensagens serão exibidas aqui após a interação com o formulário -->
+        </div>
+    </form>
+
+    <!-- Seção que apresenta os pontos turísticos de Porto Alegre -->
+    <section id="tourist-spots">
+        <h2>Pontos Turísticos de Porto Alegre</h2>
+        
+        <!-- Cada ponto turístico é descrito dentro de um 'div' com a classe 'spot' -->
+        <div class="spot">
+            <!-- Título do ponto turístico -->
+            <h3>Parque Farroupilha (Redenção)</h3>
+            <!-- Imagem do ponto turístico -->
+            <img src="p-poa-parqueredencao_r.jpg" alt="Parque Farroupilha" class="spot-image">
+            <!-- Descrição do ponto turístico -->
+            <p>Um dos maiores e mais conhecidos parques da cidade, ideal para passeios e atividades ao ar livre.</p>
+            <!-- Botão para mais informações sobre o ponto turístico -->
+            <button onclick="window.location.href='paginas/pontosturisticos.html'">Mais informações</button>
+        </div>
+        
+        <!-- Outros pontos turísticos seguem o mesmo padrão -->
+        <div class="spot">
+            <h3>Mercado Público de Porto Alegre</h3>
+            <img src="mercado-publico-porto-alegre-750x410.jpg" alt="Mercado Público" class="spot-image">
+            <p>Um centro de compras histórico, famoso por sua arquitetura e variedade de produtos.</p>
+            <button onclick="window.location.href='paginas/pontosturisticos.html'">Mais informações</button>
+        </div>
+        <div class="spot">
+            <h3>Usina do Gasômetro</h3>
+            <img src="Porto-Alegre-Usina-do-Gasômetro-Imagem-Prefeitura-Municipal.jpg" alt="Usina do Gasômetro" class="spot-image">
+            <p>Um centro cultural localizado às margens do Guaíba, oferecendo uma bela vista do pôr do sol.</p>
+            <button onclick="window.location.href='paginas/pontosturisticos.html'">Mais informações</button>
+        </div>
+        <div class="spot">
+            <h3>Jardim Botânico de Porto Alegre</h3>
+            <img src="Jardim_Botânico_Centro_Curitiba.jpg" alt="Jardim Botânico" class="spot-image">
+            <p>Um belo jardim botânico com uma grande variedade de plantas e trilhas para caminhada.</p>
+            <button onclick="window.location.href='paginas/pontosturisticos.html'">Mais informações</button>
+        </div>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Texto de copyright no rodapé -->
+        <p>&copy; 2024 Landing Page Porto Alegre</p>
+    </footer>
+
+    <!-- Vincula o arquivo JavaScript externo que contém a lógica da página -->
+    <script src="index.js"></script>
+</body>
+</html>

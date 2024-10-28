@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border nas dimensões totais dos elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte do corpo do documento */
+    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do cabeçalho */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Define a largura do cabeçalho para ocupar toda a largura da página */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Define o tamanho da fonte para o título do cabeçalho */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+header nav ul {
+    list-style: none; /* Remove os marcadores da lista de navegação */
+    display: flex; /* Alinha os itens da lista em uma linha */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+    margin-top: 10px; /* Espaço acima da lista de navegação */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Espaço horizontal entre os itens da lista */
+}
+
+header nav ul li a {
+    color: white; /* Cor do texto dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 1.1rem; /* Define o tamanho da fonte dos links */
+}
+
+header nav ul li a.active, 
+header nav ul li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado aos links ativos e ao passar o mouse */
+}
+
+/* Banner Principal */
+.banner {
+    background-color: #4CAF50; /* Cor de fundo verde para o banner */
+    padding: 40px 20px; /* Espaçamento interno ao redor do conteúdo do banner */
+    text-align: center; /* Centraliza o texto no banner */
+    margin-top: 20px; /* Espaço acima do banner */
+}
+
+.banner h2 {
+    font-size: 3rem; /* Tamanho da fonte para o título do banner */
+    color: white; /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.banner-image {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    max-width: 900px; /* Define a largura máxima da imagem */
+    height: 250px; /* Altura fixa da imagem para manter o formato paisagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner, cortando se necessário */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.banner p {
+    font-size: 1.2rem; /* Tamanho da fonte do texto no banner */
+    color: white; /* Cor do texto */
+    margin-top: 10px; /* Espaço acima do texto */
+}
+
+/* Seção Container */
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 50px auto; /* Centraliza o contêiner horizontalmente e adiciona margem superior e inferior */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do contêiner */
+}
+
+section h2 {
+    font-size: 2rem; /* Tamanho da fonte dos títulos das seções */
+    margin-bottom: 20px; /* Espaço abaixo dos títulos */
+    color: #4CAF50; /* Cor dos títulos das seções */
+}
+
+section p {
+    margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+    font-size: 1.1rem; /* Tamanho da fonte dos parágrafos */
+}
+
+section img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    margin-top: 20px; /* Espaço acima da imagem */
+}
+
+/* Seção de Cards */
+.grid {
+    display: flex; /* Alinha os itens em uma linha */
+    gap: 20px; /* Espaço entre os itens do grid */
+    margin-top: 20px; /* Espaço acima do grid */
+}
+
+.card {
+    flex: 1; /* Faz com que os cartões se expandam igualmente para preencher o espaço */
+    background-color: #f9f9f9; /* Cor de fundo clara para os cartões */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do cartão */
+    border-radius: 8px; /* Arredonda os cantos dos cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve aos cartões */
+    text-align: center; /* Centraliza o texto dentro dos cartões */
+}
+
+.card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+    border-radius: 8px; /* Arredonda os cantos da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+.card h3 {
+    font-size: 1.5rem; /* Tamanho da fonte dos títulos dos cartões */
+    color: #333; /* Cor do texto dos títulos */
+}
+
+.card p {
+    font-size: 1rem; /* Tamanho da fonte dos parágrafos dentro dos cartões */
+    color: #666; /* Cor do texto dos parágrafos */
+}
+
+/* Rodapé */
+footer {
+    background-color: #4CAF50; /* Cor de fundo verde para o rodapé */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do rodapé */
+    margin-top: 50px; /* Espaço acima do rodapé */
+    position: relative; /* Permite que o rodapé se ajuste dentro do fluxo normal do documento */
+    bottom: 0; /* Garante que o rodapé esteja no fundo da página */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+}

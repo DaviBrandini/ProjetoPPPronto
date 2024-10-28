@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão como Arial */
+    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    background-color: #f4f4f4; /* Define a cor de fundo como cinza claro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50; /* Define a cor de fundo do cabeçalho como verde */
+    color: white; /* Define a cor do texto no cabeçalho como branco */
+    padding: 20px; /* Adiciona padding interno ao cabeçalho */
+    text-align: center; /* Alinha o texto ao centro */
+    position: fixed; /* Faz o cabeçalho ficar fixo no topo da tela */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    top: 0; /* Posiciona o cabeçalho no topo da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao cabeçalho */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Define o tamanho da fonte do título do cabeçalho */
+    margin-bottom: 10px; /* Adiciona uma margem inferior ao título */
+}
+
+header nav ul {
+    list-style: none; /* Remove as bolinhas padrão das listas */
+    display: flex; /* Usa flexbox para dispor os itens da lista */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+    margin-top: 10px; /* Adiciona uma margem superior aos itens da lista */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Adiciona margens laterais aos itens da lista */
+}
+
+header nav ul li a {
+    color: white; /* Define a cor do texto dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.1rem; /* Define o tamanho da fonte dos links */
+    padding: 5px 10px; /* Adiciona padding interno aos links */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave para a cor de fundo e do texto */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #45a049; /* Muda a cor de fundo dos links ao passar o mouse ou quando ativos */
+    color: #fff; /* Define a cor do texto dos links como branco ao passar o mouse */
+}
+
+/* Seção de Pontos Turísticos */
+#tourist-spots {
+    margin: 120px auto 50px; /* Margem superior maior para evitar sobreposição com o cabeçalho fixo e margem inferior */
+    padding: 30px; /* Adiciona padding interno à seção */
+    max-width: 1200px; /* Define a largura máxima da seção */
+}
+
+#tourist-spots h2 {
+    font-size: 2.5rem; /* Define o tamanho da fonte do título da seção */
+    color: #4CAF50; /* Define a cor do texto do título como verde */
+    margin-bottom: 40px; /* Adiciona uma margem inferior ao título */
+    text-align: center; /* Centraliza o título */
+    font-weight: 600; /* Define o peso da fonte como semi-negrito */
+}
+
+/* Estilo para cada ponto turístico */
+.spot {
+    display: flex; /* Usa flexbox para alinhar os elementos dentro do ponto turístico */
+    margin-bottom: 30px; /* Adiciona uma margem inferior entre os pontos turísticos */
+    border: 1px solid #ddd; /* Adiciona uma borda cinza clara ao redor do ponto turístico */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições suaves para transformação e sombra */
+}
+
+.spot:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o tamanho do ponto turístico ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.spot-image {
+    width: 300px; /* Define a largura da imagem */
+    height: auto; /* Ajusta a altura da imagem para manter a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner */
+    flex-shrink: 0; /* Evita que a imagem encolha quando o contêiner redimensionar */
+}
+
+.spot-content {
+    padding: 20px; /* Adiciona padding interno ao conteúdo do ponto turístico */
+    flex: 1; /* Permite que o conteúdo se expanda para preencher o espaço disponível */
+}
+
+.spot-content h3 {
+    font-size: 1.8rem; /* Define o tamanho da fonte do subtítulo do ponto turístico */
+    color: #4CAF50; /* Define a cor do texto do subtítulo como verde */
+    margin-bottom: 10px; /* Adiciona uma margem inferior ao subtítulo */
+}
+
+.spot-content p {
+    margin-bottom: 10px; /* Adiciona uma margem inferior aos parágrafos */
+    line-height: 1.5; /* Define a altura da linha para melhorar a legibilidade */
+}
+
+/* Rodapé */
+footer {
+    background-color: #4CAF50; /* Define a cor de fundo do rodapé como verde */
+    color: white; /* Define a cor do texto do rodapé como branco */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 20px; /* Adiciona padding interno ao rodapé */
+    margin-top: 50px; /* Adiciona uma margem superior ao rodapé */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao rodapé */
+}

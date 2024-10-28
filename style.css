@@ -1,0 +1,313 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte usada na página como Roboto */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o padding padrão do navegador */
+    background-color: #eaeaea; /* Define a cor de fundo da página */
+    color: #333; /* Define a cor do texto */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Alinha os elementos na coluna */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
+    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4CAF50 30%, #66bb6a 100%); /* Gradiente de verde no fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    padding: 30px 0; /* Define o padding superior e inferior */
+    text-align: center; /* Alinha o texto ao centro */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao cabeçalho */
+    margin-bottom: 0; /* Remove a margem inferior */
+}
+
+header h1 {
+    font-size: 36px; /* Define o tamanho da fonte do título */
+    font-family: 'Lobster', cursive; /* Define a fonte do título como Lobster */
+    margin: 0; /* Remove a margem do título */
+}
+
+/* Map Section */
+#map {
+    height: 500px; /* Define a altura do mapa */
+    width: 100%; /* Define a largura do mapa como 100% */
+    margin-bottom: 30px; /* Adiciona uma margem inferior */
+    border-radius: 0px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao mapa */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas arredondadas */
+}
+
+/* Info Section */
+#info {
+    max-width: 800px; /* Define a largura máxima */
+    margin: 20px; /* Adiciona margens ao redor da seção */
+    padding: 30px; /* Adiciona padding interno */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    border-radius: 12px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+#info h2 {
+    font-size: 28px; /* Define o tamanho da fonte dos subtítulos */
+    color: #4CAF50; /* Define a cor do texto como verde */
+    margin-bottom: 15px; /* Adiciona margem inferior aos subtítulos */
+}
+
+#info p {
+    font-size: 18px; /* Define o tamanho da fonte dos parágrafos */
+    color: #555; /* Define a cor do texto como cinza escuro */
+}
+
+/* Form */
+form {
+    padding: 40px; /* Adiciona padding interno ao formulário */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    border-radius: 12px; /* Adiciona bordas arredondadas */
+    margin: 20px 0; /* Adiciona margens superior e inferior */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    max-width: 500px; /* Define a largura máxima do formulário */
+    width: 90%; /* Define a largura do formulário como 90% da largura do contêiner pai */
+}
+
+form label {
+    display: block; /* Faz com que o rótulo ocupe uma linha inteira */
+    margin-bottom: 10px; /* Adiciona margem inferior aos rótulos */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #333; /* Define a cor do texto como cinza escuro */
+}
+
+form input[type="text"] {
+    padding: 12px; /* Adiciona padding interno aos campos de entrada */
+    width: 100%; /* Define a largura dos campos de entrada como 100% do contêiner pai */
+    margin-bottom: 20px; /* Adiciona margem inferior aos campos de entrada */
+    border: 1px solid #ccc; /* Define uma borda cinza clara */
+    border-radius: 8px; /* Adiciona bordas arredondadas aos campos de entrada */
+    font-size: 16px; /* Define o tamanho da fonte nos campos de entrada */
+}
+
+/* Form Button */
+form button {
+    background: linear-gradient(135deg, #4CAF50, #66bb6a); /* Gradiente de verde no botão */
+    color: white; /* Cor do texto do botão */
+    padding: 12px 20px; /* Adiciona padding interno ao botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 30px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    width: 100%; /* Define a largura do botão como 100% do contêiner pai */
+    font-size: 18px; /* Define o tamanho da fonte no botão */
+    transition: background 0.3s ease, transform 0.2s ease; /* Adiciona efeitos de transição ao fundo e transformação */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #388E3C, #4CAF50); /* Muda o gradiente ao passar o mouse */
+    transform: translateY(-3px); /* Move o botão para cima ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+form button:active {
+    transform: translateY(0); /* Remove o efeito de deslocamento ao clicar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Restaura a sombra original ao clicar */
+}
+
+/* Messages */
+#messages {
+    padding: 20px; /* Adiciona padding interno */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    border-radius: 12px; /* Adiciona bordas arredondadas */
+    margin: 20px 0; /* Adiciona margens superior e inferior */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    max-width: 500px; /* Define a largura máxima */
+    width: 90%; /* Define a largura como 90% do contêiner pai */
+}
+
+/* Tourist Spots */
+#tourist-spots {
+    padding: 30px; /* Adiciona padding interno */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    border-radius: 12px; /* Adiciona bordas arredondadas */
+    margin: 20px 0; /* Adiciona margens superior e inferior */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    max-width: 800px; /* Define a largura máxima */
+    width: 90%; /* Define a largura como 90% do contêiner pai */
+}
+
+.spot {
+    margin-bottom: 40px; /* Adiciona margem inferior entre os pontos turísticos */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.spot img.spot-image {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+    max-width: 450px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    border-radius: 12px; /* Adiciona bordas arredondadas às imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve às imagens */
+    margin-bottom: 20px; /* Adiciona margem inferior às imagens */
+    transition: transform 0.3s ease; /* Adiciona um efeito de transição ao transformar a imagem */
+}
+
+.spot img.spot-image:hover {
+    transform: scale(1.05); /* Aumenta a escala da imagem ao passar o mouse */
+}
+
+.spot h3 {
+    margin-top: 0; /* Remove a margem superior do título */
+    font-size: 26px; /* Define o tamanho da fonte do título */
+    color: #4CAF50; /* Define a cor do texto como verde */
+}
+
+.spot p {
+    margin: 0; /* Remove margens do parágrafo */
+    font-size: 18px; /* Define o tamanho da fonte do parágrafo */
+    color: #666; /* Define a cor do texto como cinza claro */
+    margin-bottom: 20px; /* Adiciona margem inferior ao parágrafo */
+}
+
+.spot button {
+    background-color: #4CAF50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    padding: 12px 20px; /* Adiciona padding interno ao botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    transition: background-color 0.3s ease; /* Adiciona um efeito de transição ao fundo do botão */
+}
+
+.spot button:hover {
+    background-color: #388E3C; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* More Information Button */
+.more-info-btn {
+    background: linear-gradient(135deg, #4CAF50, #66bb6a); /* Gradiente de verde no botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 15px; /* Adiciona padding interno ao botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 30px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte no botão */
+    transition: background 0.3s ease, transform 0.2s ease; /* Adiciona efeitos de transição ao fundo e transformação */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
+    display: inline-block; /* Faz o botão se comportar como um bloco em linha */
+    margin-top: 10px; /* Adiciona margem superior ao botão */
+}
+
+.more-info-btn:hover {
+    background: linear-gradient(135deg, #388E3C, #4CAF50); /* Muda o gradiente ao passar o mouse */
+    transform: translateY(-3px); /* Move o botão para cima ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.more-info-btn:active {
+    transform: translateY(0); /* Remove o efeito de deslocamento ao clicar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Restaura a sombra original ao clicar */
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50; /* Define a cor de fundo do rodapé */
+    color: white; /* Define a cor do texto no rodapé */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 15px; /* Adiciona padding interno */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao rodapé */
+    margin-top: 30px; /* Adiciona uma margem superior */
+    position: relative; /* Define a posição como relativa */
+    bottom: 0; /* Posiciona o rodapé no fundo do contêiner pai */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Largura total da sidebar */
+    height: 100vh;
+    background-color: #4CAF50;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 8px 8px 0;
+    transition: left 0.3s ease;
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+/* Links e botão com o mesmo estilo */
+.sidebar a, 
+.sidebar button {
+    display: block;
+    width: 100%; /* Garante que ocupem toda a largura da sidebar */
+    color: white;
+    padding: 15px 20px; /* Padding consistente em todos os lados */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-sizing: border-box; /* Evita que padding quebre o layout */
+    transition: background-color 0.3s, padding-left 0.3s;
+    cursor: pointer;
+}
+
+.sidebar a:hover, 
+.sidebar button:hover {
+    background-color: #45a049;
+    padding-left: 30px; /* Pequeno deslocamento ao passar o mouse */
+}
+
+/* Botão de abrir a sidebar */
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+    z-index: 1100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+
+.open-btn:hover {
+    background-color: #45a049;
+}
+
+/* Ajuste no conteúdo principal */
+header, #map, #info, form, #messages, #tourist-spots, footer {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Sidebar aberta */
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar.open ~ .open-btn {
+    left: 250px;
+}
+
+.sidebar.open + header,
+.sidebar.open + #map,
+.sidebar.open + #info,
+.sidebar.open + form,
+.sidebar.open + #messages,
+.sidebar.open + #tourist-spots,
+.sidebar.open + footer {
+    margin-left: 250px;
+}
+
+html, body {
+    width: 100%; /* Garante que o corpo e o html ocupem toda a largura */
+    overflow-x: hidden; /* Evita que a página tenha rolagem horizontal */
+}
