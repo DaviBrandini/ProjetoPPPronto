@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pesquisa - Porto Alegre</title>
+    <link rel="stylesheet" href="historico.css">
+</head>
+<body>
+
+    <header>
+        <h1>Histórico de Pesquisa</h1>
+        <button class="inicio" onclick="window.location.href='../inicio.html'">Início</button>
+    </header>
+
+    <section id="history">
+        <h2>Endereços Pesquisados Recentemente</h2>
+        <ul id="search-history-list"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Landing Page Porto Alegre</p>
+    </footer>
+
+    <script>
+        // Recupera o histórico de pesquisas do localStorage
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+        const historyList = document.getElementById('search-history-list');
+
+        if (searchHistory.length > 0) {
+            // Exibe cada pesquisa no histórico
+            searchHistory.forEach((search) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${search.address} - ${search.date}`;
+                historyList.appendChild(listItem);
+            });
+        } else {
+            const noHistoryMessage = document.createElement('li');
+            noHistoryMessage.textContent = "Nenhuma pesquisa registrada ainda.";
+            historyList.appendChild(noHistoryMessage);
+        }
+    </script>
+
+</body>
+</html>
