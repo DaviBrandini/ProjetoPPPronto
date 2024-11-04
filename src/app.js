@@ -13,7 +13,7 @@ const fileUpload = require('express-fileupload');
 // Importa os roteadores definidos para gerenciar usuários, login e tarefas
 const usersRouter = require('./routes/userRouter');
 const loginRouter = require('./routes/loginRouter');
-const taskRouter = require('./routes/taskRouter');
+const historicoRouter = require('./routes/historicoRouter');
 
 // Instancia o aplicativo Express na variável app
 const app = express();
@@ -36,7 +36,7 @@ app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 // Todas as rotas que começam com '/api' serão gerenciadas pelos roteadores
 app.use('/api', usersRouter); // Rotas relacionadas a usuários
 app.use('/api', loginRouter); // Rotas relacionadas ao login
-app.use('/api', taskRouter);  // Rotas relacionadas a tarefas
+app.use('/api', historicoRouter);  // Rotas relacionadas a tarefas
 
 // Exporta o aplicativo Express para ser utilizado em outros módulos, como em um arquivo de inicialização do servidor
 module.exports = app;

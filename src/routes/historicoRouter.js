@@ -4,11 +4,12 @@ const { Router } = require('express');
 const router = Router();
  
 // Importa a função 'storeTask' do módulo 'taskController'
-const { storeTask } = require('../controller/taskController');
+const { storeHistorico, getHistorico } = require('../controller/historicoController');
  
 // Define uma rota POST para o endpoint '/store/task'
 // Quando uma requisição POST for feita para '/store/task', a função 'storeTask' será chamada
-router.post('/store/task', storeTask);
+router.post('/store/historico', storeHistorico);
+router.get("/get/historico/:id_user", getHistorico)
  
 // Exporta o roteador para que possa ser utilizado em outros módulos
 module.exports = router;

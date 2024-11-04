@@ -7,7 +7,7 @@ async function login(request, response) {
     const email = request.body.email;
 
     // Consulta SQL para selecionar o email e a senha do usuário
-    const query = "SELECT email, password FROM users WHERE email = ?";
+    const query = "SELECT id, email, password FROM users WHERE email = ?";
 
     // Executa a consulta SQL
     connection.query(query, email, (err, results) => {

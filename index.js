@@ -3,6 +3,9 @@ let map;
 let geocoder;
 let markers = []; // Armazena os marcadores no mapa
 
+
+
+
 // Array de pontos turísticos com nome, latitude e longitude
 const pontosTuristicos = [
     {
@@ -157,3 +160,37 @@ document.getElementById('logout-button').addEventListener('click', function() {
     sessionStorage.removeItem('user');
     window.location.href = 'login.html';
 });
+
+
+let button = document.getElementById("handleSubmit");
+button.onclick = async function() {
+    // Obtém o valor do campo de entrada com o ID "title"
+    let title = document.getElementById("title").value;
+    let id_user = localStorage.getItem("id_user")
+
+    // Cria um objeto com o valor do título
+    let data = { title, id_user };
+ 
+    // Envia uma solicitação POST para o servidor para armazenar a tarefa
+    const response = await fetch('http://localhost:3000/api/store/historico', {
+        method: "POST",
+        headers: {"Content-type": "application/json;charset=UTF-8"},
+        body: JSON.stringify(data)
+    });
+ 
+    // Recebe a resposta do servidor em formato JSON
+    let content = await response.json();
+    //console.log (content)
+ 
+    // Exibe uma mensagem de sucesso ou erro com base na resposta do servidor
+    if (content.success) {
+        alert("Sucesso");
+    } else {
+        alert('Não');
+    }
+
+
+
+
+
+}

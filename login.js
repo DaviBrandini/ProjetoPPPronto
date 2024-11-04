@@ -38,9 +38,12 @@ async function entrar() {
   // Verifica se o login foi bem-sucedido
   if (content.success) {
     // Armazena o token de autenticação no localStorage
-    localStorage.setItem('token', content.token);
+    localStorage.setItem('id_user', content.data[0].id);
+   
+
     // Exibe uma mensagem de sucesso
     alert('Login realizado com sucesso');
+
     // Redireciona para a página principal
     window.location.href = 'inicio.html';
   } else {
