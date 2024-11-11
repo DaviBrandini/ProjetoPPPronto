@@ -1,21 +1,18 @@
-CREATE DATABASE porto_alegre;
+create database db_tasks;
 
-USE porto_alegre;
+use db_tasks;
 
-CREATE TABLE porto_alegre (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT,
-    latitude DOUBLE NOT NULL,
-    longitude DOUBLE NOT NULL
+create table historico (
+	id INT auto_increment primary key,
+	title VARCHAR(255) not null,
+	description text,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_user INT,
+    foreign key (id_user) references users (id)
+    
 );
 
-select * from tasks;
-
-INSERT INTO points_of_interest (name, description, latitude, longitude) VALUES
-('Parque Farroupilha', 'Um dos maiores e mais populares parques de Porto Alegre.', -30.037878, -51.218513),
-('Mercado Público', 'Um mercado histórico com uma variedade de produtos locais.', -30.027704, -51.228734),
-('Usina do Gasômetro', 'Centro cultural com uma vista incrível do Rio Guaíba.', -30.031041, -51.241550);
+select*from historico;
 
 create table users(
 	id int not null auto_increment primary key,

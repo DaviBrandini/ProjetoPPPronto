@@ -24,7 +24,7 @@ header {
 
 header h1 {
     font-size: 36px; /* Define o tamanho da fonte do título */
-    font-family: 'Lobster', cursive; /* Define a fonte do título como Lobster */
+    font-family: 'Georgia', serif; /* Define a fonte do título como Georgia */
     margin: 0; /* Remove a margem do título */
 }
 

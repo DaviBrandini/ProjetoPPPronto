@@ -52,5 +52,3 @@ async function entrar() {
   }
 }
 
-// Adiciona um evento de clique ao botão de login
-document.getElementById('btnConfirm').addEventListener('click', entrar);

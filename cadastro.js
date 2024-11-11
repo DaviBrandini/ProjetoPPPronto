@@ -75,15 +75,6 @@ senha.addEventListener('keyup', () => {
 async function cadastrar() {
   if (validNome && validEmail && validSenha) {
     // Se todos os campos forem válidos, armazena os dados no localStorage
-    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-
-    listaUser.push({
-      nomeCad: nome.value,
-      emailCad: email.value,
-      senhaCad: senha.value
-    })
-
-    localStorage.setItem('listaUser', JSON.stringify(listaUser))
 
     // Envia os dados ao servidor
     let data = { nome: nome.value, email: email.value, senha: senha.value }
